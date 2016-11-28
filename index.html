@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>test for open to link within app</title>
+    <style>
+      ol li {
+        line-height: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li><a href="intent://github.com#Intent;scheme=http;action=android.intent.action.VIEW;end">intent://github.com#Intent;scheme=http;action=android.intent.action.VIEW;end</a></li>
+      <li><a href="intent://github.com#Intent;scheme=http;action=android.intent.action.VIEW;package=com.android.chrome;end">intent://github.com#Intent;scheme=http;action=android.intent.action.VIEW;package=com.android.chrome;end</a></li>
+      <li><a href="intent://github.com#Intent;scheme=http;action=android.intent.action.VIEW;package=com.android.browser;end">intent://github.com#Intent;scheme=http;action=android.intent.action.VIEW;package=com.android.browser;end</a></li>
+      <li><a href="twitter://post?message=hello%20world">twitter://post?message=hello%20world</a></li>
+      <li><a href="intent://post?message=hello%20world#Intent;scheme=twitter;package=com.twitter.android;end">intent://post?message=hello%20world#Intent;scheme=twitter;package=com.twitter.android;end</a></li>
+      <li><a href="https://github.com/">https://github.com/</a></li>
+      <li><a href="https://github.com/" target="_blank">https://github.com/ (target="_blank")</a></li>
+      <li><a href="https://github.com/" target="_system">https://github.com/ (target="_system")</a></li>
+      <li><a href="https://twitter.com/">https://twitter.com/</a></li>
+      <li><a href="https://twitter.com/" target="_blank">https://twitter.com/ (target="_blank")</a></li>
+      <li><a href="https://twitter.com/" target="_system">https://twitter.com/ (target="_system")</a></li>
+      <li><a href="https://twitter.com/oauth">https://twitter.com/oauth</a></li>
+      <li><a href="https://twitter.com/oauth/authorize">https://twitter.com/oauth/authorize</a></li>
+      <li><a href="javascript:window.open('https://github.com/', '_system');">javascript:window.open('https://github.com/', '_system');</a></li>
+      <li><a href="javascript:window.open('https://twitter.com/', '_system');">javascript:window.open('https://twitter.com/', '_system');</a></li>
+      <li><a href="javascript:(function(){var xhr = new XMLHttpRequest(); xhr.open('GET', 'https://twitter.com/oauth/authorize'); xhr.send()}());">javascript:(function(){var xhr = new XMLHttpRequest(); xhr.open('GET', 'https://twitter.com/oauth/authorize'); xhr.send()}());</a></li>
+    </ol>
+  </body>
+</html>
